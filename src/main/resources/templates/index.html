@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Employee Project</title>
+</head>
+<body>
+	<h2>EMPLOYEE PROJECT</h2>
+	<hr>
+	
+	<div>
+		<h3>Employee  Options:</h3>
+		<a th:href="@{/allEmployees}">Display All Employees</a> <br> 
+		<a th:href="@{/addEmployee}"> Add Employee</a> <br>
+
+		
+		<form th:action="@{/findAllByAddressKeyword}">
+			<div>
+				<label>Address keyword to filter through Employees:</label>
+				 <input id="keyword" name="keyword" type="text">
+			</div>
+			<button>Search</button>
+		</form>
+		<br>
+		<form th:action="@{/findByFirstName}">
+			<div>
+				<label>Enter First </label>
+				 <input id="firstName" name="firstName" type="text"> 
+
+			</div>
+			<button>Search</button>
+		</form>
+				<form th:action="@{/findByLastName}">
+			<div>
+
+				 	<label >  Last name:</label>
+				  <input id="lastName" name="lastName" type="text">
+			</div>
+			<button>Search</button>
+		</form>
+	</div>
+	
+	
+</body>
+</html>
